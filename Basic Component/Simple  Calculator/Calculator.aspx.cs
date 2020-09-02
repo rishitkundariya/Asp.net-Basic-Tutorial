@@ -18,7 +18,7 @@ public partial class Calculator : System.Web.UI.Page
     {   if (txtNuber1.Text!= "" && txtNumber2.Text!= "")
         {
 
-            lblShowAnswer.Text = (Convert.ToDouble(txtNuber1.Text) + Convert.ToDouble(txtNumber2.Text)).ToString();
+            lblShowAnswer.Text = " Answer = " +(Convert.ToDouble(txtNuber1.Text) + Convert.ToDouble(txtNumber2.Text)).ToString();
         }
         else
         {
@@ -32,7 +32,7 @@ public partial class Calculator : System.Web.UI.Page
         if (txtNuber1.Text != "" && txtNumber2.Text != "")
         {
 
-            lblShowAnswer.Text = (Convert.ToDouble(txtNuber1.Text) - Convert.ToDouble(txtNumber2.Text)).ToString();
+            lblShowAnswer.Text = " Answer = " + (Convert.ToDouble(txtNuber1.Text) - Convert.ToDouble(txtNumber2.Text)).ToString();
         }
         else
         {
@@ -46,7 +46,7 @@ public partial class Calculator : System.Web.UI.Page
         if (txtNuber1.Text != "" && txtNumber2.Text != "")
         {
 
-            lblShowAnswer.Text = (Convert.ToDouble(txtNuber1.Text)*Convert.ToDouble(txtNumber2.Text)).ToString();
+            lblShowAnswer.Text = " Answer = " + (Convert.ToDouble(txtNuber1.Text)*Convert.ToDouble(txtNumber2.Text)).ToString();
         }
         else
         {
@@ -59,7 +59,7 @@ public partial class Calculator : System.Web.UI.Page
         if (txtNuber1.Text != "" && txtNumber2.Text != "" && Convert.ToDouble(txtNumber2.Text)!=0)
         {
 
-            lblShowAnswer.Text = (Convert.ToDouble(txtNuber1.Text) / Convert.ToDouble(txtNumber2.Text)).ToString();
+            lblShowAnswer.Text = " Answer = " + (Convert.ToDouble(txtNuber1.Text) / Convert.ToDouble(txtNumber2.Text)).ToString();
         }
         else
         {
