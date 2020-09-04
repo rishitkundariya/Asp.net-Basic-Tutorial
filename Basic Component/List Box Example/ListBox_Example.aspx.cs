@@ -17,7 +17,19 @@ public partial class ListBox_Example : System.Web.UI.Page
         ListItem temp = new ListItem();
         temp.Value = txtCountryCode.Text;
         temp.Text = txtCountry.Text;
-        lbLeft.Items.Add(temp);
+        Boolean valid = true;
+        foreach (ListItem item in lbLeft.Items)
+        {
+            if((temp.Value==item.Value)&& (temp.Text == item.Text))
+            {
+                valid=false;
+                break;
+            }
+        }
+        if (valid == true)
+        {
+            lbLeft.Items.Add(temp);
+        }
     }
 
     protected void btnRemove_Click(object sender, EventArgs e)
