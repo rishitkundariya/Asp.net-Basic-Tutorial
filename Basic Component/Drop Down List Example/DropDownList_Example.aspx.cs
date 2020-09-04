@@ -52,7 +52,11 @@ public partial class DropDownList_Example : System.Web.UI.Page
         lblMessage.Text = "";
         foreach(ListItem temp in ddlCountry.Items)
         {
-            lblMessage.Text += temp.Value + " - " + temp.Text + "<br />";
+            if (temp.Selected)
+            {
+                lblMessage.Text += temp.Value + " - " + temp.Text + "<br />";
+            }
+            
         }
         lblMessage.CssClass = "text-info";
     }

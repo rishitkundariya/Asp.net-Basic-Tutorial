@@ -1,17 +1,17 @@
-﻿ge<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DropDownList_Example.aspx.cs" Inherits="DropDownList_Example" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ListBox_Example.aspx.cs" Inherits="ListBox_Example" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>DropDown List</title>
+    <title>List Box</title>
     <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="Bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
     <script src="Bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="container">
+         <div class="container">
 	         <div class="row" style="padding-top:20px;">
 	    	    <div class="col-md-5" style="padding:0px;">
                     Enter the Code of Country:-
@@ -31,15 +31,19 @@
                  </div>
              </div>
             <div class="row" style="padding-top:20px;">
-                <div class="col-md-5">
-                    <asp:DropDownList ID="ddlCountry" runat="server" CssClass="form-control"></asp:DropDownList>
+                <div class="col-md-4">
+                    <asp:ListBox ID="lbLeft" runat="server" SelectionMode="Multiple" CssClass="form-control"></asp:ListBox>
                 </div>
-                <div class="col-md-2">
-                    <asp:Button ID="btnShow" runat="server" Text="Display"  CssClass="form-control btn btn-primary btn-block" OnClick="btnShow_Click"/>
+                <div class="col-md-1"> 
+                    <asp:Button ID="btnAllRight" runat="server" Text=">>"  CssClass="form-control btn btn-primary btn-block" OnClick="btnAllRight_Click" />
+                     <asp:Button ID="btnOneLR" runat="server" Text=">"  CssClass="form-control btn btn-primary btn-block" OnClick="btnOneLR_Click" />
+                     <asp:Button ID="btnOneRL" runat="server" Text="<"  CssClass="form-control btn btn-primary btn-block" OnClick="btnOneRL_Click" />
+                     <asp:Button ID="btnAllLeft" runat="server" Text="<<"  CssClass="form-control btn btn-primary btn-block" OnClick="btnAllLeft_Click" />
                 </div>
-                <div class="col-md-5">
-                <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
-            </div>
+                <div class="col-md-4">
+                     <asp:ListBox ID="lbRight" runat="server" SelectionMode="Multiple" CssClass="form-control"></asp:ListBox>
+                </div>
+                
             </div>
             
             
