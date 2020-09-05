@@ -19,9 +19,19 @@ public partial class DropDownList_Example : System.Web.UI.Page
         ListItem item = new ListItem();
         item.Value = txtCountryCode.Text;
         item.Text = txtCountry.Text;
+        Boolean add = true;
+        foreach(ListItem temp in ddlCountry.Items)
+        {
+            if(temp.Value==txtCountryCode.Text && temp.Text == txtCountry.Text)
+            {
+                add = false;
+            }
+        }
+        if (add) { 
         ddlCountry.Items.Add(item);
         lblMessage.Text = "Entery Sccessfully Add";
         lblMessage.CssClass = "text-success";
+        }
     }
 
     protected void btnRemove_Click(object sender, EventArgs e)

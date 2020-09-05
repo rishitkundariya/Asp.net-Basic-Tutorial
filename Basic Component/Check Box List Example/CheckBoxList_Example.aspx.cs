@@ -17,7 +17,19 @@ public partial class CheckBoxList_Example : System.Web.UI.Page
         ListItem temp = new ListItem();
         temp.Value = txtCountryCode.Text;
         temp.Text = txtCountry.Text;
-        cblLeft.Items.Add(temp);
+        Boolean add = true;
+        foreach (ListItem item in cblLeft.Items)
+        {
+            if (temp.Value == txtCountryCode.Text && temp.Text == txtCountry.Text)
+            {
+                add = false;
+            }
+        }
+        if (add)
+        {
+            cblLeft.Items.Add(temp);
+        }
+        
     }
 
     protected void btnRemove_Click(object sender, EventArgs e)
