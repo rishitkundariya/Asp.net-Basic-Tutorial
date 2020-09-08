@@ -20,7 +20,7 @@ public partial class CheckBoxList_Example : System.Web.UI.Page
         Boolean add = true;
         foreach (ListItem item in cblLeft.Items)
         {
-            if (temp.Value == txtCountryCode.Text && temp.Text == txtCountry.Text)
+            if (item.Text == txtCountry.Text && item.Value==txtCountryCode.Text)
             {
                 add = false;
             }

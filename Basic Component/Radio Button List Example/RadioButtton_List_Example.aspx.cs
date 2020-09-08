@@ -20,7 +20,7 @@ public partial class RadioButtton_List_Example : System.Web.UI.Page
         Boolean add = true;
         foreach (ListItem item in rblLeft.Items)
         {
-            if (temp.Value == txtCountryCode.Text && temp.Text == txtCountry.Text)
+            if (item.Value == txtCountryCode.Text && item.Text == txtCountry.Text)
             {
                 add = false;
             }
